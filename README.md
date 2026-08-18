@@ -16,6 +16,25 @@ npm run dev
 npm run build
 ```
 
+## Run with Docker Desktop
+
+Docker Desktop can build and run the site as a production-style local
+container. The site will be available at http://localhost:3000.
+
+```bash
+cp .env.example .env
+# Add NEXT_PUBLIC_GOOGLE_MAPS_API_KEY to .env when live Google data is needed.
+docker compose up --build
+```
+
+Stop the container with `Ctrl+C`, or run `docker compose down` from another
+terminal. Without a Google Maps key, the page uses its built-in preview map and
+demo data so the layout remains usable.
+
+The browser key is intentionally a public client-side value. In Google Cloud,
+restrict it to the local origin and enable Maps JavaScript API plus Places API
+(New) before using live search.
+
 This starter does not use `wrangler.jsonc`.
 
 ## Included Shape
