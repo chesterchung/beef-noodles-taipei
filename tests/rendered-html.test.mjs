@@ -21,6 +21,7 @@ test("server-renders the 90-store map and verified article introductions", async
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
+  const readableHtml = html.replaceAll("<!-- -->", "");
   assert.match(html, /深夜牛肉麵地圖/);
   assert.match(html, />90<!-- --> 間/);
   assert.match(html, /半島牛肉麵/);
@@ -28,6 +29,8 @@ test("server-renders the 90-store map and verified article introductions", async
   assert.match(html, /窩客島/);
   assert.match(html, /文章僅顯示以店名明確對上/);
   assert.match(html, /class="article-card"/);
+  assert.match(readableHtml, /第 1 \/ 18 頁/);
+  assert.equal((html.match(/class="restaurant-card/g) ?? []).length, 5);
 });
 
 test("article data skips stores without a verified match", async () => {
