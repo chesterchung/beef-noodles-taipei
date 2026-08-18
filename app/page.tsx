@@ -1,6 +1,8 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { isLateNightHours } from "./late-night-hours.js";
+import { restaurantSeedData } from "./restaurants-data.js";
 
 type City = "全部" | "台北市" | "新北市" | "桃園市";
 type MapMode = "preview" | "loading" | "google";
@@ -56,17 +58,6 @@ type WindowWithMaps = Window & {
   google?: GoogleMapsGlobal;
 };
 
-const demoRestaurants: Restaurant[] = [
-  { id: "taipei-late-01", name: "林東芳牛肉麵", city: "台北市", address: "台北市中山區安東街 4-3 號", hours: "11:00–03:00", closingHour: 3, rating: 4.2, reviews: 3821, price: "$$", lat: 25.0431, lng: 121.5432, isOpen: true },
-  { id: "taipei-02", name: "劉山東牛肉麵", city: "台北市", address: "台北市中正區開封街一段 14 巷 2 號", hours: "08:00–20:00", closingHour: 20, rating: 4.1, reviews: 2964, price: "$$", lat: 25.0459, lng: 121.5152, isOpen: false },
-  { id: "taipei-late-03", name: "清真黃牛肉麵館", city: "台北市", address: "台北市大安區復興南路一段 107 巷 5 弄", hours: "11:30–02:30", closingHour: 2.5, rating: 4.0, reviews: 1742, price: "$$", lat: 25.0427, lng: 121.5445, isOpen: true },
-  { id: "newtaipei-late-01", name: "老五鍋燒牛肉麵", city: "新北市", address: "新北市板橋區漢生東路 305 號", hours: "11:00–03:30", closingHour: 3.5, rating: 4.3, reviews: 2287, price: "$$", lat: 25.0142, lng: 121.4656, isOpen: true },
-  { id: "newtaipei-02", name: "好味道牛肉麵", city: "新北市", address: "新北市永和區永貞路 289 號", hours: "11:00–21:30", closingHour: 21.5, rating: 4.4, reviews: 1190, price: "$$", lat: 25.0073, lng: 121.5162, isOpen: true },
-  { id: "newtaipei-late-03", name: "三重牛肉麵大王", city: "新北市", address: "新北市三重區重新路二段 13 號", hours: "10:30–02:15", closingHour: 2.25, rating: 3.9, reviews: 856, price: "$", lat: 25.0615, lng: 121.4881, isOpen: false },
-  { id: "taoyuan-01", name: "老袁的牛肉麵", city: "桃園市", address: "桃園市桃園區中正路 596 號", hours: "11:00–22:00", closingHour: 22, rating: 4.2, reviews: 1477, price: "$$", lat: 24.9983, lng: 121.3109, isOpen: true },
-  { id: "taoyuan-late-02", name: "大溪老街牛肉麵", city: "桃園市", address: "桃園市大溪區和平路 91 號", hours: "11:00–02:45", closingHour: 2.75, rating: 4.1, reviews: 935, price: "$$", lat: 24.8837, lng: 121.2874, isOpen: false },
-];
-
 const cityCenters: Record<Exclude<City, "全部">, { lat: number; lng: number }> = {
   台北市: { lat: 25.0418, lng: 121.535 },
   新北市: { lat: 25.012, lng: 121.465 },
@@ -97,10 +88,6 @@ function loadGoogleMaps(apiKey: string) {
 
 function formatReviews(value: number) {
   return new Intl.NumberFormat("zh-TW").format(value);
-}
-
-function isLateNightHours(closingHour: number) {
-  return closingHour > 2 && closingHour < 24;
 }
 
 function makeRestaurantFromPlace(place: GooglePlace, city: Exclude<City, "全部">, index: number): Restaurant {
@@ -137,12 +124,12 @@ export default function Home() {
   const mapInstanceRef = useRef<MapInstance | null>(null);
   const markerConstructorRef = useRef<((new (options: { map: MapInstance; position: { lat: number; lng: number }; title: string }) => MarkerInstance) | null)>(null);
   const markersRef = useRef<MarkerInstance[]>([]);
-  const [restaurants, setRestaurants] = useState(demoRestaurants);
+  const [restaurants, setRestaurants] = useState(restaurantSeedData);
   const [activeCity, setActiveCity] = useState<City>("全部");
   const [query, setQuery] = useState("");
   const [submittedQuery, setSubmittedQuery] = useState("");
   const [lateOnly, setLateOnly] = useState(false);
-  const [selectedId, setSelectedId] = useState(demoRestaurants[0].id);
+  const [selectedId, setSelectedId] = useState(restaurantSeedData[0].id);
   const [mapMode, setMapMode] = useState<MapMode>("preview");
   const [mapMessage, setMapMessage] = useState("示範資料");
   const [isSearching, setIsSearching] = useState(false);
@@ -253,7 +240,7 @@ export default function Home() {
         <div className="topbar-note"><span className="live-dot" /> 即時營業資訊</div>
       </header>
 
-      <section className="hero-copy"><div><p className="section-kicker">A WARM BOWL, ANY HOUR</p><h2>今晚，從哪一碗開始？</h2><p className="hero-description">整理台北、新北、桃園的牛肉麵店，<br />把還亮著燈的那幾家先留給你。</p></div><div className="hero-stats" aria-label="店家統計"><div><strong>{restaurants.length}</strong><span>收錄店家</span></div><div><strong>{lateCount}</strong><span>凌晨 02:00 後</span></div></div></section>
+      <section className="hero-copy"><div><p className="section-kicker">A WARM BOWL, ANY HOUR</p><h2>今晚，從哪一碗開始？</h2><p className="hero-description">整理台北、新北、桃園的牛肉麵店，<br />把還亮著燈的那幾家先留給你。</p></div><div className="hero-stats" aria-label="店家統計"><div><strong>{restaurants.length}</strong><span>收錄店家</span></div><div><strong>{lateCount}</strong><span>凌晨 00:00 後</span></div></div></section>
 
       <section className="workspace" aria-label="牛肉麵地圖與店家列表">
         <div className="map-panel">
@@ -269,7 +256,7 @@ export default function Home() {
           <div className="list-heading"><div><p className="section-kicker">CURATED PICKS</p><h2>附近的好味道</h2></div><span className="result-count">{visibleRestaurants.length} 間</span></div>
           <form className="search-form" onSubmit={handleSearch}><label className="sr-only" htmlFor="restaurant-search">搜尋店家或地址</label><span className="search-icon" aria-hidden="true">⌕</span><input id="restaurant-search" type="search" placeholder="搜尋店家、地址…" value={query} onChange={(event) => setQuery(event.target.value)} /><button type="submit" aria-label="搜尋" disabled={isSearching}>{isSearching ? "…" : "搜尋"}</button></form>
           <div className="filter-row" role="group" aria-label="城市篩選">{(["全部", "台北市", "新北市", "桃園市"] as City[]).map((city) => <button key={city} className={`city-chip ${activeCity === city ? "active" : ""}`} type="button" onClick={() => handleCityChange(city)}>{city}</button>)}</div>
-          <button className={`late-toggle ${lateOnly ? "active" : ""}`} type="button" onClick={() => setLateOnly((value) => !value)}><span className="toggle-icon">☾</span><span><strong>只看凌晨還開著</strong><small>營業時間超過 02:00 的店家</small></span><span className="toggle-switch" aria-hidden="true"><i /></span></button>
+          <button className={`late-toggle ${lateOnly ? "active" : ""}`} type="button" onClick={() => setLateOnly((value) => !value)}><span className="toggle-icon">☾</span><span><strong>只看凌晨還開著</strong><small>營業時間超過 00:00 的店家</small></span><span className="toggle-switch" aria-hidden="true"><i /></span></button>
 
           <div className="list-scroll" role="list" aria-live="polite">
             {visibleRestaurants.length ? visibleRestaurants.map((restaurant, index) => <article key={restaurant.id} className={`restaurant-card ${restaurant.id === selectedId ? "selected" : ""} ${isLateNightHours(restaurant.closingHour) ? "is-late" : ""}`} role="listitem"><button className="card-main" type="button" onClick={() => setSelectedId(restaurant.id)}><span className="card-number">{String(index + 1).padStart(2, "0")}</span><span className="card-content"><span className="card-topline"><span className="city-label">{restaurant.city}</span>{isLateNightHours(restaurant.closingHour) && <span className="late-badge">凌晨特選</span>}</span><strong>{restaurant.name}</strong><span className="card-address">{restaurant.address}</span><span className="card-meta"><span className="rating">★ {restaurant.rating.toFixed(1)}</span><span>{formatReviews(restaurant.reviews)} 則評論</span><span>{restaurant.price}</span></span></span><span className="card-arrow" aria-hidden="true">↗</span></button><div className="card-hours"><span className={`open-dot ${restaurant.isOpen ? "open" : "closed"}`} /> {restaurant.isOpen ? "營業中" : "今日已打烊"}<span className={isLateNightHours(restaurant.closingHour) ? "closing late-text" : "closing"}> · {restaurant.hours}</span>{restaurant.googleMapsUri && <a href={restaurant.googleMapsUri} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>在 Google Maps 開啟 ↗</a>}</div>{restaurant.id === selectedId && <div className="selected-line" />}</article>) : <div className="empty-state"><span>⌕</span><strong>找不到符合的牛肉麵店</strong><p>換個關鍵字，或先清除凌晨篩選試試。</p></div>}
