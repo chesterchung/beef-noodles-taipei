@@ -54,3 +54,11 @@ button { cursor: pointer; }
 @media (max-width: 980px) { .site-shell { padding: 0 24px 20px; }.workspace { grid-template-columns: 1fr; }.map-panel, .list-panel { min-height: 560px; }.map-canvas { min-height: 470px; }.list-scroll { max-height: 520px; }.map-toolbar { width: calc(100% - 48px); }.hero-copy { padding: 42px 0 32px; } }
 @media (max-width: 560px) { .site-shell { padding: 0 14px 18px; }.topbar { height: 78px; }.topbar-note { display: none; }.brand-lockup h1 { font-size: 18px; }.hero-copy { display: block; padding: 34px 0 28px; }.hero-copy h2 { font-size: 36px; }.hero-stats { margin-top: 28px; }.hero-stats div { min-width: 78px; }.workspace { gap: 12px; }.map-panel { min-height: 430px; }.map-canvas { min-height: 360px; }.map-toolbar { width: calc(100% - 28px); margin: 14px; }.map-control { font-size: 10px; }.list-panel { min-height: 620px; }.list-heading { padding: 22px 20px 17px; }.search-form, .filter-row, .late-toggle { margin-left: 18px; margin-right: 18px; }.filter-row { padding-left: 0; padding-right: 0; }.late-toggle { width: calc(100% - 36px); }.site-footer { display: block; line-height: 1.8; }.site-footer span:last-child { display: block; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+.article-list { display: grid; gap: 8px; padding: 0 10px 15px 47px; }
+.article-card { display: block; padding: 10px 11px; border: 1px solid #e7e9df; background: #fbfbf6; color: var(--ink); text-decoration: none; transition: border-color .18s ease, background .18s ease; }
+.article-card:hover { border-color: #b9c7b5; background: #f3f6ef; }
+.article-source { display: flex; align-items: center; justify-content: space-between; color: var(--green); font-size: 9px; font-weight: 700; letter-spacing: .08em; }
+.article-source small { color: #9aa39a; font-size: 9px; font-weight: 500; letter-spacing: 0; }
+.article-card strong { display: block; margin-top: 5px; font-size: 11px; line-height: 1.45; }
+.article-card p { margin: 5px 0 0; color: var(--muted); font-size: 10px; line-height: 1.55; }
+.article-read { display: block; margin-top: 6px; color: var(--tomato); font-size: 9px; font-weight: 700; }

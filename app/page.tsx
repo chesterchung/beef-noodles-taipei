@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
+import { restaurantArticleData } from "./article-data.js";
 import { isLateNightHours } from "./late-night-hours.js";
 import { restaurantSeedData } from "./restaurants-data.js";
 
@@ -21,6 +22,17 @@ type Restaurant = {
   lng: number;
   isOpen: boolean;
   googleMapsUri?: string;
+  articles?: {
+    "食尚玩家"?: Article;
+    "窩客島"?: Article;
+  };
+};
+
+type Article = {
+  title: string;
+  publishedAt: string;
+  excerpt: string;
+  url: string;
 };
 
 type MapInstance = {
@@ -124,12 +136,16 @@ export default function Home() {
   const mapInstanceRef = useRef<MapInstance | null>(null);
   const markerConstructorRef = useRef<((new (options: { map: MapInstance; position: { lat: number; lng: number }; title: string }) => MarkerInstance) | null)>(null);
   const markersRef = useRef<MarkerInstance[]>([]);
-  const [restaurants, setRestaurants] = useState(restaurantSeedData);
+  const seededRestaurants = useMemo(() => restaurantSeedData.map((restaurant) => ({
+    ...restaurant,
+    articles: restaurantArticleData[restaurant.name as keyof typeof restaurantArticleData],
+  })), []);
+  const [restaurants, setRestaurants] = useState<Restaurant[]>(seededRestaurants);
   const [activeCity, setActiveCity] = useState<City>("全部");
   const [query, setQuery] = useState("");
   const [submittedQuery, setSubmittedQuery] = useState("");
   const [lateOnly, setLateOnly] = useState(false);
-  const [selectedId, setSelectedId] = useState(restaurantSeedData[0].id);
+  const [selectedId, setSelectedId] = useState(seededRestaurants[0].id);
   const [mapMode, setMapMode] = useState<MapMode>("preview");
   const [mapMessage, setMapMessage] = useState("示範資料");
   const [isSearching, setIsSearching] = useState(false);
@@ -259,9 +275,9 @@ export default function Home() {
           <button className={`late-toggle ${lateOnly ? "active" : ""}`} type="button" onClick={() => setLateOnly((value) => !value)}><span className="toggle-icon">☾</span><span><strong>只看凌晨還開著</strong><small>營業時間超過 00:00 的店家</small></span><span className="toggle-switch" aria-hidden="true"><i /></span></button>
 
           <div className="list-scroll" role="list" aria-live="polite">
-            {visibleRestaurants.length ? visibleRestaurants.map((restaurant, index) => <article key={restaurant.id} className={`restaurant-card ${restaurant.id === selectedId ? "selected" : ""} ${isLateNightHours(restaurant.closingHour) ? "is-late" : ""}`} role="listitem"><button className="card-main" type="button" onClick={() => setSelectedId(restaurant.id)}><span className="card-number">{String(index + 1).padStart(2, "0")}</span><span className="card-content"><span className="card-topline"><span className="city-label">{restaurant.city}</span>{isLateNightHours(restaurant.closingHour) && <span className="late-badge">凌晨特選</span>}</span><strong>{restaurant.name}</strong><span className="card-address">{restaurant.address}</span><span className="card-meta"><span className="rating">★ {restaurant.rating.toFixed(1)}</span><span>{formatReviews(restaurant.reviews)} 則評論</span><span>{restaurant.price}</span></span></span><span className="card-arrow" aria-hidden="true">↗</span></button><div className="card-hours"><span className={`open-dot ${restaurant.isOpen ? "open" : "closed"}`} /> {restaurant.isOpen ? "營業中" : "今日已打烊"}<span className={isLateNightHours(restaurant.closingHour) ? "closing late-text" : "closing"}> · {restaurant.hours}</span>{restaurant.googleMapsUri && <a href={restaurant.googleMapsUri} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>在 Google Maps 開啟 ↗</a>}</div>{restaurant.id === selectedId && <div className="selected-line" />}</article>) : <div className="empty-state"><span>⌕</span><strong>找不到符合的牛肉麵店</strong><p>換個關鍵字，或先清除凌晨篩選試試。</p></div>}
+            {visibleRestaurants.length ? visibleRestaurants.map((restaurant, index) => <article key={restaurant.id} className={`restaurant-card ${restaurant.id === selectedId ? "selected" : ""} ${isLateNightHours(restaurant.closingHour) ? "is-late" : ""}`} role="listitem"><button className="card-main" type="button" onClick={() => setSelectedId(restaurant.id)}><span className="card-number">{String(index + 1).padStart(2, "0")}</span><span className="card-content"><span className="card-topline"><span className="city-label">{restaurant.city}</span>{isLateNightHours(restaurant.closingHour) && <span className="late-badge">凌晨特選</span>}</span><strong>{restaurant.name}</strong><span className="card-address">{restaurant.address}</span><span className="card-meta"><span className="rating">★ {restaurant.rating.toFixed(1)}</span><span>{formatReviews(restaurant.reviews)} 則評論</span><span>{restaurant.price}</span></span></span><span className="card-arrow" aria-hidden="true">↗</span></button><div className="card-hours"><span className={`open-dot ${restaurant.isOpen ? "open" : "closed"}`} /> {restaurant.isOpen ? "營業中" : "今日已打烊"}<span className={isLateNightHours(restaurant.closingHour) ? "closing late-text" : "closing"}> · {restaurant.hours}</span>{restaurant.googleMapsUri && <a href={restaurant.googleMapsUri} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>在 Google Maps 開啟 ↗</a>}</div>{restaurant.articles && <div className="article-list" aria-label={`${restaurant.name} 的文章介紹`}>{Object.entries(restaurant.articles).map(([source, article]) => article && <a key={source} className="article-card" href={article.url} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}><span className="article-source">{source}<small>{article.publishedAt}</small></span><strong>{article.title}</strong><p>{article.excerpt}</p><span className="article-read">閱讀原文 ↗</span></a>)}</div>}{restaurant.id === selectedId && <div className="selected-line" />}</article>) : <div className="empty-state"><span>⌕</span><strong>找不到符合的牛肉麵店</strong><p>換個關鍵字，或先清除凌晨篩選試試。</p></div>}
           </div>
-          <p className="data-note">資料由 Google Maps Places 提供；營業時間請以店家最新公告為準。</p>
+          <p className="data-note">店家資料由 Google Maps Places 提供；文章僅顯示以店名明確對上的食尚玩家／窩客島內容。營業時間請以店家最新公告為準。</p>
         </aside>
       </section>
       <footer className="site-footer"><span>一碗熱湯，剛好接住晚回家的人。</span><span>© 2026 深夜牛肉麵地圖</span></footer>
