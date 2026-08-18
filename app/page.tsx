@@ -261,7 +261,8 @@ export default function Home() {
       <section className="workspace" aria-label="牛肉麵地圖與店家列表">
         <div className="map-panel">
           <div className="map-toolbar"><div className="map-status"><span className="map-status-dot" /> {mapMessage}</div><button className="map-control" type="button" onClick={() => mapInstanceRef.current?.setZoom(11)} aria-label="重設地圖縮放">⌖ 重設視野</button></div>
-          <div ref={mapHostRef} className={`map-canvas ${mapMode === "google" ? "is-google" : ""}`} aria-label="Google 地圖顯示區">
+          <div className={`map-canvas ${mapMode === "google" ? "is-google" : ""}`} aria-label="Google 地圖顯示區">
+            <div ref={mapHostRef} className="google-map-host" />
             {mapMode !== "google" && <div className="preview-map" aria-hidden="true"><div className="map-grid map-grid-one" /><div className="map-grid map-grid-two" /><div className="river" /><span className="region-label label-taipei">台北市</span><span className="region-label label-newtaipei">新北市</span><span className="region-label label-taoyuan">桃園市</span>{visibleRestaurants.map((restaurant, index) => <button key={restaurant.id} className={`map-pin pin-${index % 6} ${isLateNightHours(restaurant.closingHour) ? "late" : ""} ${restaurant.id === selectedId ? "selected" : ""}`} type="button" onClick={() => setSelectedId(restaurant.id)} aria-label={`選擇 ${restaurant.name}`}><span>{index + 1}</span></button>)}<div className="preview-map-caption"><span className="mini-pin late" /> 凌晨仍營業 <span className="mini-pin" /> 一般營業</div></div>}
             {mapMode === "loading" && <div className="map-loading">正在載入地圖…</div>}
           </div>

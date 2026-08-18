@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 test("waits for the Google Maps callback before reporting the API as ready", async () => {
@@ -45,4 +46,11 @@ test("waits for the Google Maps callback before reporting the API as ready", asy
     globalThis.window = originalWindow;
     globalThis.document = originalDocument;
   }
+});
+
+test("keeps the Google Maps host separate from React-rendered map UI", async () => {
+  const pageSource = await readFile(new URL("../app/page.tsx", import.meta.url), "utf8");
+
+  assert.match(pageSource, /<div ref=\{mapHostRef\} className="google-map-host" \/>/);
+  assert.doesNotMatch(pageSource, /<div ref=\{mapHostRef\} className=\{`map-canvas/);
 });
