@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 import { restaurantArticleData } from "./article-data.js";
+import { loadGoogleMaps } from "./google-maps-loader.js";
 import { isLateNightHours } from "./late-night-hours.js";
 import { paginateItems } from "./pagination.js";
 import { restaurantSeedData } from "./restaurants-data.js";
@@ -78,28 +79,6 @@ const cityCenters: Record<Exclude<City, "全部">, { lat: number; lng: number }>
 };
 
 const RESTAURANTS_PER_PAGE = 5;
-
-let googleMapsPromise: Promise<void> | null = null;
-
-function loadGoogleMaps(apiKey: string) {
-  if (typeof window === "undefined") return Promise.reject(new Error("browser-only"));
-  const runtimeWindow = window as WindowWithMaps;
-  if (runtimeWindow.google?.maps?.importLibrary) return Promise.resolve();
-  if (googleMapsPromise) return googleMapsPromise;
-
-  googleMapsPromise = new Promise<void>((resolve, reject) => {
-    const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&loading=async`;
-    script.async = true;
-    script.defer = true;
-    script.dataset.googleMaps = "true";
-    script.onload = () => resolve();
-    script.onerror = () => reject(new Error("Google Maps could not load"));
-    document.head.appendChild(script);
-  });
-
-  return googleMapsPromise;
-}
 
 function formatReviews(value: number) {
   return new Intl.NumberFormat("zh-TW").format(value);
