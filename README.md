@@ -18,14 +18,17 @@ npm run build
 
 ## Run with Docker Desktop
 
-Docker Desktop can build and run the site as a production-style local
-container. The site will be available at http://localhost:3000.
+Docker Desktop can build and run the site as a Node/npm container. The site will
+be available at http://localhost:3000.
 
 ```bash
 cp .env.example .env
 # Add NEXT_PUBLIC_GOOGLE_MAPS_API_KEY to .env when live Google data is needed.
 docker compose up --build
 ```
+
+The container runs `npm run start` with the vinext server on port 3000; it does
+not use Nginx or deploy the client bundle as a standalone static site.
 
 Stop the container with `Ctrl+C`, or run `docker compose down` from another
 terminal. Without a Google Maps key, the page uses its built-in preview map and
