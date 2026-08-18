@@ -38,6 +38,29 @@ The browser key is intentionally a public client-side value. In Google Cloud,
 restrict it to the local origin and enable Maps JavaScript API plus Places API
 (New) before using live search.
 
+## Deploy to GitHub Pages
+
+The repository includes `.github/workflows/pages.yml`. A push to `main`, or a
+manual workflow run, builds a static export and deploys `dist/client` to GitHub
+Pages.
+
+Before the first deployment, open the repository's **Settings → Pages** and set
+**Build and deployment → Source** to **GitHub Actions**.
+
+The built-in preview map does not require a key. To enable live Google Maps and
+Places search, add a repository Actions secret named
+`NEXT_PUBLIC_GOOGLE_MAPS_API_KEY`. Because the key is included in the browser
+bundle, restrict it in Google Cloud to the repository Pages URL and enable Maps
+JavaScript API plus Places API (New).
+
+To verify the Pages artifact locally:
+
+```bash
+NEXT_PUBLIC_BASE_PATH=/beef-noodles-taipei npm run build:pages
+test -f dist/client/index.html
+test -f dist/client/_next/static/css/*.css
+```
+
 This starter does not use `wrangler.jsonc`.
 
 ## Included Shape
@@ -113,6 +136,7 @@ actions tied to the current ChatGPT user. Leave public content anonymous.
 
 - `npm run dev`: start local development
 - `npm run build`: verify the vinext build output
+- `npm run build:pages`: build and prepare the GitHub Pages artifact
 - `npm test`: build the starter and verify its rendered loading skeleton
 - `npm run db:generate`: generate Drizzle migrations after schema changes
 
