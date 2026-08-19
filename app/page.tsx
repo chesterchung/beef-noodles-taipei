@@ -83,6 +83,13 @@ function formatReviews(value: number) {
   return new Intl.NumberFormat("zh-TW").format(value);
 }
 
+function cityFromAddress(address: string, fallbackCity: Exclude<City, "全部">): Exclude<City, "全部"> {
+  if (address.includes("新北市")) return "新北市";
+  if (address.includes("桃園市") || address.includes("桃园市")) return "桃園市";
+  if (address.includes("台北市") || address.includes("臺北市")) return "台北市";
+  return fallbackCity;
+}
+
 function makeRestaurantFromPlace(place: GooglePlace, city: Exclude<City, "全部">, index: number): Restaurant {
   const periods = place.regularOpeningHours?.periods ?? [];
   const closingHour = Math.max(0, ...periods.map((period) => {
@@ -90,11 +97,12 @@ function makeRestaurantFromPlace(place: GooglePlace, city: Exclude<City, "全部
     return close ? close.hour + close.minute / 60 : 0;
   }));
   const hours = place.regularOpeningHours?.weekdayDescriptions?.[0] ?? "營業時間請見 Google Maps";
+  const address = place.formattedAddress ?? "地址請見 Google Maps";
   return {
     id: place.id ?? `${city}-${index}`,
     name: place.displayName ?? "未命名店家",
-    city,
-    address: place.formattedAddress ?? "地址請見 Google Maps",
+    city: cityFromAddress(address, city),
+    address,
     hours,
     closingHour,
     rating: place.rating ?? 0,
