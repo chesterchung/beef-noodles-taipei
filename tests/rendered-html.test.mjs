@@ -15,7 +15,7 @@ async function render() {
   );
 }
 
-test("server-renders the 90-store map and verified article introductions", async () => {
+test("server-renders the 110-store map and verified article introductions", async () => {
   const response = await render();
   assert.equal(response.status, 200);
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
@@ -23,13 +23,13 @@ test("server-renders the 90-store map and verified article introductions", async
   const html = await response.text();
   const readableHtml = html.replaceAll("<!-- -->", "");
   assert.match(html, /深夜牛肉麵地圖/);
-  assert.match(html, />90<!-- --> 間/);
+  assert.match(html, />110<!-- --> 間/);
   assert.match(html, /半島牛肉麵/);
   assert.match(html, /食尚玩家/);
   assert.match(html, /窩客島/);
   assert.match(html, /文章僅顯示以店名明確對上/);
   assert.match(html, /class="article-card"/);
-  assert.match(readableHtml, /第 1 \/ 18 頁/);
+  assert.match(readableHtml, /第 1 \/ 22 頁/);
   assert.equal((html.match(/class="restaurant-card/g) ?? []).length, 5);
 });
 

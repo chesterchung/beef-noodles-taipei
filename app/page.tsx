@@ -22,7 +22,6 @@ type Restaurant = {
   price: string;
   lat: number;
   lng: number;
-  isOpen: boolean;
   googleMapsUri?: string;
   articles?: {
     "食尚玩家"?: Article;
@@ -103,7 +102,6 @@ function makeRestaurantFromPlace(place: GooglePlace, city: Exclude<City, "全部
     price: "$$",
     lat: place.location?.lat() ?? cityCenters[city].lat,
     lng: place.location?.lng() ?? cityCenters[city].lng,
-    isOpen: false,
     googleMapsUri: place.googleMapsURI,
   };
 }
@@ -119,6 +117,7 @@ export default function Home() {
   const mapInstanceRef = useRef<MapInstance | null>(null);
   const markerConstructorRef = useRef<((new (options: { map: MapInstance; position: { lat: number; lng: number }; title: string }) => MarkerInstance) | null)>(null);
   const markersRef = useRef<MarkerInstance[]>([]);
+  const selectedIdRef = useRef<string | null>(null);
   const seededRestaurants = useMemo(() => restaurantSeedData.map((restaurant) => ({
     ...restaurant,
     articles: restaurantArticleData[restaurant.name as keyof typeof restaurantArticleData],
@@ -128,7 +127,7 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [submittedQuery, setSubmittedQuery] = useState("");
   const [lateOnly, setLateOnly] = useState(false);
-  const [selectedId, setSelectedId] = useState(seededRestaurants[0].id);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   const [mapMode, setMapMode] = useState<MapMode>("preview");
   const [mapMessage, setMapMessage] = useState("示範資料");
   const [isSearching, setIsSearching] = useState(false);
@@ -150,6 +149,10 @@ export default function Home() {
   const lateCount = restaurants.filter((restaurant) => isLateNightHours(restaurant.closingHour)).length;
 
   useEffect(() => {
+    selectedIdRef.current = selectedId;
+  }, [selectedId]);
+
+  useEffect(() => {
     const apiKey = getApiKey();
     if (!apiKey || !mapHostRef.current) return;
     setMapMode("loading");
@@ -167,6 +170,20 @@ export default function Home() {
       markerConstructorRef.current = markerLibrary.AdvancedMarkerElement as unknown as typeof markerConstructorRef.current;
       setMapMode("google");
       setMapMessage("Google Maps + Places");
+
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            if (cancelled || selectedIdRef.current) return;
+            const map = mapInstanceRef.current;
+            if (!map) return;
+            map.panTo({ lat: position.coords.latitude, lng: position.coords.longitude });
+            map.setZoom(14);
+          },
+          () => {},
+          { enableHighAccuracy: false, maximumAge: 300000, timeout: 8000 },
+        );
+      }
     }).catch(() => {
       if (!cancelled) {
         setMapMode("preview");
@@ -185,15 +202,11 @@ export default function Home() {
     markersRef.current.forEach((marker) => { marker.map = null; });
     markersRef.current = visibleRestaurants.map((restaurant) => {
       const marker = new MarkerConstructor({ map, position: { lat: restaurant.lat, lng: restaurant.lng }, title: restaurant.name });
-      marker.addListener("gmp-click", () => setSelectedId(restaurant.id));
+      marker.addListener("gmp-click", () => selectRestaurant(restaurant.id));
       return marker;
     });
 
-    if (visibleRestaurants[0]) {
-      map.panTo({ lat: visibleRestaurants[0].lat, lng: visibleRestaurants[0].lng });
-      map.setZoom(activeCity === "全部" ? 11 : 13);
-    }
-  }, [activeCity, visibleRestaurants]);
+  }, [mapMode, visibleRestaurants]);
 
   useEffect(() => {
     const selected = restaurants.find((restaurant) => restaurant.id === selectedId);
@@ -208,9 +221,14 @@ export default function Home() {
   }
 
   function focusRestaurant(restaurant: Restaurant) {
-    setSelectedId(restaurant.id);
+    selectRestaurant(restaurant.id);
     mapInstanceRef.current?.panTo({ lat: restaurant.lat, lng: restaurant.lng });
     mapInstanceRef.current?.setZoom(15);
+  }
+
+  function selectRestaurant(restaurantId: string) {
+    selectedIdRef.current = restaurantId;
+    setSelectedId(restaurantId);
   }
 
   function changePage(page: number) {
@@ -237,7 +255,7 @@ export default function Home() {
       const liveRestaurants = places.map((place, index) => makeRestaurantFromPlace(place, city, index));
       if (liveRestaurants.length) {
         setRestaurants(liveRestaurants);
-        setSelectedId(liveRestaurants[0].id);
+        selectRestaurant(liveRestaurants[0].id);
         setMapMessage(`Google Places · ${liveRestaurants.length} 筆`);
       } else {
         setMapMessage("Google Places 沒有找到符合結果");
@@ -263,7 +281,7 @@ export default function Home() {
           <div className="map-toolbar"><div className="map-status"><span className="map-status-dot" /> {mapMessage}</div><button className="map-control" type="button" onClick={() => mapInstanceRef.current?.setZoom(11)} aria-label="重設地圖縮放">⌖ 重設視野</button></div>
           <div className={`map-canvas ${mapMode === "google" ? "is-google" : ""}`} aria-label="Google 地圖顯示區">
             <div ref={mapHostRef} className="google-map-host" />
-            {mapMode !== "google" && <div className="preview-map" aria-hidden="true"><div className="map-grid map-grid-one" /><div className="map-grid map-grid-two" /><div className="river" /><span className="region-label label-taipei">台北市</span><span className="region-label label-newtaipei">新北市</span><span className="region-label label-taoyuan">桃園市</span>{visibleRestaurants.map((restaurant, index) => <button key={restaurant.id} className={`map-pin pin-${index % 6} ${isLateNightHours(restaurant.closingHour) ? "late" : ""} ${restaurant.id === selectedId ? "selected" : ""}`} type="button" onClick={() => setSelectedId(restaurant.id)} aria-label={`選擇 ${restaurant.name}`}><span>{index + 1}</span></button>)}<div className="preview-map-caption"><span className="mini-pin late" /> 凌晨仍營業 <span className="mini-pin" /> 一般營業</div></div>}
+            {mapMode !== "google" && <div className="preview-map" aria-hidden="true"><div className="map-grid map-grid-one" /><div className="map-grid map-grid-two" /><div className="river" /><span className="region-label label-taipei">台北市</span><span className="region-label label-newtaipei">新北市</span><span className="region-label label-taoyuan">桃園市</span>{visibleRestaurants.map((restaurant, index) => <button key={restaurant.id} className={`map-pin pin-${index % 6} ${isLateNightHours(restaurant.closingHour) ? "late" : ""} ${restaurant.id === selectedId ? "selected" : ""}`} type="button" onClick={() => selectRestaurant(restaurant.id)} aria-label={`選擇 ${restaurant.name}`}><span>{index + 1}</span></button>)}<div className="preview-map-caption"><span className="mini-pin late" /> 凌晨仍營業 <span className="mini-pin" /> 一般營業</div></div>}
             {mapMode === "loading" && <div className="map-loading">正在載入地圖…</div>}
           </div>
           <div className="map-footer"><span>點選地圖標記查看店家</span><span className="google-wordmark">Google Maps</span></div>
@@ -276,7 +294,7 @@ export default function Home() {
           <button className={`late-toggle ${lateOnly ? "active" : ""}`} type="button" onClick={() => { setLateOnly((value) => !value); setCurrentPage(1); }}><span className="toggle-icon">☾</span><span><strong>只看凌晨還開著</strong><small>營業時間超過 00:00 的店家</small></span><span className="toggle-switch" aria-hidden="true"><i /></span></button>
 
           <div ref={listScrollRef} className="list-scroll" role="list" aria-live="polite">
-            {visibleRestaurants.length ? paginatedRestaurants.map((restaurant, index) => <article key={restaurant.id} className={`restaurant-card ${restaurant.id === selectedId ? "selected" : ""} ${isLateNightHours(restaurant.closingHour) ? "is-late" : ""}`} role="listitem"><button className="card-main" type="button" onClick={() => focusRestaurant(restaurant)} aria-label={`在地圖上定位 ${restaurant.name}`}><span className="card-number">{String((currentPage - 1) * RESTAURANTS_PER_PAGE + index + 1).padStart(2, "0")}</span><span className="card-content"><span className="card-topline"><span className="city-label">{restaurant.city}</span>{isLateNightHours(restaurant.closingHour) && <span className="late-badge">凌晨特選</span>}</span><strong>{restaurant.name}</strong><span className="card-address">{restaurant.address}</span><span className="card-meta"><span className="rating">★ {restaurant.rating.toFixed(1)}</span><span>{formatReviews(restaurant.reviews)} 則評論</span><span>{restaurant.price}</span></span></span><span className="card-arrow" aria-hidden="true">↗</span></button><div className="card-hours"><span className={`open-dot ${restaurant.isOpen ? "open" : "closed"}`} /> {restaurant.isOpen ? "營業中" : "今日已打烊"}<span className={isLateNightHours(restaurant.closingHour) ? "closing late-text" : "closing"}> · {restaurant.hours}</span>{restaurant.googleMapsUri && <a href={restaurant.googleMapsUri} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>在 Google Maps 開啟 ↗</a>}</div>{restaurant.articles && <div className="article-list" aria-label={`${restaurant.name} 的文章介紹`}>{Object.entries(restaurant.articles).map(([source, article]) => article && <a key={source} className="article-card" href={article.url} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}><span className="article-source">{source}<small>{article.publishedAt}</small></span><strong>{article.title}</strong><p>{article.excerpt}</p><span className="article-read">閱讀原文 ↗</span></a>)}</div>}{restaurant.id === selectedId && <div className="selected-line" />}</article>) : <div className="empty-state"><span>⌕</span><strong>找不到符合的牛肉麵店</strong><p>換個關鍵字，或先清除凌晨篩選試試。</p></div>}
+            {visibleRestaurants.length ? paginatedRestaurants.map((restaurant, index) => <article key={restaurant.id} className={`restaurant-card ${restaurant.id === selectedId ? "selected" : ""} ${isLateNightHours(restaurant.closingHour) ? "is-late" : ""}`} role="listitem"><button className="card-main" type="button" onClick={() => focusRestaurant(restaurant)} aria-label={`在地圖上定位 ${restaurant.name}`}><span className="card-number">{String((currentPage - 1) * RESTAURANTS_PER_PAGE + index + 1).padStart(2, "0")}</span><span className="card-content"><span className="card-topline"><span className="city-label">{restaurant.city}</span>{isLateNightHours(restaurant.closingHour) && <span className="late-badge">凌晨特選</span>}</span><strong>{restaurant.name}</strong><span className="card-address">{restaurant.address}</span><span className="card-meta"><span className="rating">★ {restaurant.rating.toFixed(1)}</span><span>{formatReviews(restaurant.reviews)} 則評論</span><span>{restaurant.price}</span></span></span><span className="card-arrow" aria-hidden="true">↗</span></button><div className="card-hours">{restaurant.hours}{restaurant.googleMapsUri && <a href={restaurant.googleMapsUri} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}>在 Google Maps 開啟 ↗</a>}</div>{restaurant.articles && <div className="article-list" aria-label={`${restaurant.name} 的文章介紹`}>{Object.entries(restaurant.articles).map(([source, article]) => article && <a key={source} className="article-card" href={article.url} target="_blank" rel="noreferrer" onClick={(event) => event.stopPropagation()}><span className="article-source">{source}<small>{article.publishedAt}</small></span><strong>{article.title}</strong><p>{article.excerpt}</p><span className="article-read">閱讀原文 ↗</span></a>)}</div>}{restaurant.id === selectedId && <div className="selected-line" />}</article>) : <div className="empty-state"><span>⌕</span><strong>找不到符合的牛肉麵店</strong><p>換個關鍵字，或先清除凌晨篩選試試。</p></div>}
           </div>
           {visibleRestaurants.length > 0 && <nav className="pagination" aria-label="店家列表分頁"><button type="button" onClick={() => changePage(currentPage - 1)} disabled={currentPage === 1} aria-label="上一頁">← 上一頁</button><span aria-live="polite">第 {currentPage} / {pageCount} 頁</span><button type="button" onClick={() => changePage(currentPage + 1)} disabled={currentPage === pageCount} aria-label="下一頁">下一頁 →</button></nav>}
           <p className="data-note">店家資料由 Google Maps Places 提供；文章僅顯示以店名明確對上的食尚玩家／窩客島內容。營業時間請以店家最新公告為準。</p>

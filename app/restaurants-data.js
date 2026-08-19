@@ -11,7 +11,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0422413,
     "lng": 121.54737069999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=18215623298922185915&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -26,7 +25,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0468666,
     "lng": 121.54610019999998,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=1878344578796299009&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -41,7 +39,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0419245,
     "lng": 121.57029109999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=16673720678028578043&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -56,7 +53,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.044603,
     "lng": 121.533443,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=11086270591147571304&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -71,7 +67,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0450444,
     "lng": 121.50801749999998,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=7200076283136820605&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -86,7 +81,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0283199,
     "lng": 121.54684780000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=2758009579527803549&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -101,7 +95,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.042977699999998,
     "lng": 121.5451243,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=17497692303398499955&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -116,7 +109,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.107327599999998,
     "lng": 121.5275642,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=17539520431804986176&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -131,7 +123,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0542557,
     "lng": 121.54630669999997,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=10565341398992508998&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -146,7 +137,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.046919199999998,
     "lng": 121.54175760000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=17267355400596382098&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -161,7 +151,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0199052,
     "lng": 121.55385340000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=4558610094506869503&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -176,7 +165,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0401243,
     "lng": 121.53204749999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=12090790471825760205&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -191,7 +179,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.027743299999997,
     "lng": 121.5546686,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=1976702762319013495&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -206,7 +193,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0283855,
     "lng": 121.5238138,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=7131521431509218849&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -221,7 +207,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0603595,
     "lng": 121.5416455,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=16246376641218693098&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -236,7 +221,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0468516,
     "lng": 121.57805390000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=9518098203687467130&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -251,7 +235,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0468672,
     "lng": 121.542915,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=12362541407063649109&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -266,7 +249,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0476197,
     "lng": 121.50773579999998,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=3050142585044218419&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -281,7 +263,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.047628399999997,
     "lng": 121.508326,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=7741372280846402955&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -296,7 +277,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.043407199999997,
     "lng": 121.54857729999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=2535418091161860714&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -311,7 +291,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0420706,
     "lng": 121.55495659999998,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=5381090262815681304&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -326,7 +305,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.047455,
     "lng": 121.50826699999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=18396533425658985563&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -341,7 +319,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.039869000000003,
     "lng": 121.576847,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=5172838001416428762&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -356,7 +333,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.029080000000004,
     "lng": 121.5244318,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=18062516882177199680&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -371,7 +347,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.040457999999997,
     "lng": 121.57764299999998,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=5751053186415236408&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -386,7 +361,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.052876299999998,
     "lng": 121.55520920000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=10123749876947898393&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -401,7 +375,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0456123,
     "lng": 121.51078509999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=1225189766129973702&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -416,7 +389,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.051807,
     "lng": 121.52738339999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=7568215873297962597&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -431,7 +403,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0435797,
     "lng": 121.5060857,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=2021455683086311662&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -446,8 +417,287 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0274987,
     "lng": 121.56347199999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=12155392710790473412&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
+  },
+  {
+    "id": "ChIJubVE0QypQjQR_SbZicsVSxA",
+    "name": "劉山東小吃店",
+    "city": "台北市",
+    "address": "100臺北市中正區黎明里開封街一段14巷2號",
+    "hours": "星期一: 08:00 – 18:00",
+    "closingHour": 18,
+    "rating": 4,
+    "reviews": 11346,
+    "price": "$$",
+    "lat": 25.0457149,
+    "lng": 121.51376020000001,
+    "googleMapsUri": "https://maps.google.com/?cid=1174056091795400445&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJRz3JQ9mrQjQR3gS-aReMoWU",
+    "name": "林東芳牛肉麵",
+    "city": "台北市",
+    "address": "104臺北市中山區埤頭里八德路二段322號",
+    "hours": "星期一: 11:00 – 03:00",
+    "closingHour": 3,
+    "rating": 3.8,
+    "reviews": 12491,
+    "price": "$$",
+    "lat": 25.047252399999998,
+    "lng": 121.54307920000001,
+    "googleMapsUri": "https://maps.google.com/?cid=7323288501267334366&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJo--aBuurQjQRyN89ig3p_vM",
+    "name": "大膽牛腩麵",
+    "city": "台北市",
+    "address": "10478臺北市中山區朱馥里遼寧街222號",
+    "hours": "星期一: 11:30 – 15:30, 17:00 – 20:30",
+    "closingHour": 20.5,
+    "rating": 4.2,
+    "reviews": 1118,
+    "price": "$$",
+    "lat": 25.056355,
+    "lng": 121.5420226,
+    "googleMapsUri": "https://maps.google.com/?cid=17581746239664152520&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJ6REc_tCrQjQR7g-IYs0CYgA",
+    "name": "天下三絕麵食館",
+    "city": "台北市",
+    "address": "106臺北市大安區仁愛里仁愛路四段27巷3號",
+    "hours": "星期一: 11:30 – 14:30, 17:30 – 20:30",
+    "closingHour": 20.5,
+    "rating": 4.3,
+    "reviews": 3082,
+    "price": "$$",
+    "lat": 25.03888,
+    "lng": 121.54531680000001,
+    "googleMapsUri": "https://maps.google.com/?cid=27587628862279662&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJcRSHRACrQjQRr1OtxkGc8kI",
+    "name": "地一牛肉麵",
+    "city": "台北市",
+    "address": "106臺北市大安區車層里延吉街162號",
+    "hours": "星期一: 11:30 – 22:30",
+    "closingHour": 22.5,
+    "rating": 4.7,
+    "reviews": 851,
+    "price": "$$",
+    "lat": 25.0392007,
+    "lng": 121.5549147,
+    "googleMapsUri": "https://maps.google.com/?cid=4824089957187277743&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJrbAQt12pQjQR4qwLC-rCh_8",
+    "name": "史記正宗牛肉麵",
+    "city": "台北市",
+    "address": "10491臺北市中山區中吉里四平街19號",
+    "hours": "星期一: 11:30 – 14:40, 17:30 – 20:40",
+    "closingHour": 20.666666666666668,
+    "rating": 3.9,
+    "reviews": 2137,
+    "price": "$$",
+    "lat": 25.053720199999997,
+    "lng": 121.53108999999998,
+    "googleMapsUri": "https://maps.google.com/?cid=18412899911991012578&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJE2970YWrQjQRDbib6RUUrK4",
+    "name": "東館牛麵食館",
+    "city": "台北市",
+    "address": "104臺北市中山區復華里南京東路三段109巷15號",
+    "hours": "星期一: 11:30 – 15:00, 17:00 – 20:00",
+    "closingHour": 20,
+    "rating": 4.4,
+    "reviews": 1169,
+    "price": "$$",
+    "lat": 25.0530217,
+    "lng": 121.5400296,
+    "googleMapsUri": "https://maps.google.com/?cid=12586457142939858957&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJs8O4umWpQjQR7Ff1VT7As7Y",
+    "name": "郁誠牛肉麵",
+    "city": "台北市",
+    "address": "104臺北市中山區集英里中山北路二段116巷2-7號",
+    "hours": "星期一: 10:30 – 15:00, 16:00 – 20:00",
+    "closingHour": 20,
+    "rating": 4.4,
+    "reviews": 919,
+    "price": "$$",
+    "lat": 25.060791,
+    "lng": 121.52198599999998,
+    "googleMapsUri": "https://maps.google.com/?cid=13165077509696739308&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJ7XZhmV2pQjQRgP1HOd75EvM",
+    "name": "廖家牛肉麵",
+    "city": "台北市",
+    "address": "104臺北市中山區中原里中原街41號",
+    "hours": "星期一: 11:30 – 14:30, 17:00 – 21:00",
+    "closingHour": 21,
+    "rating": 3.9,
+    "reviews": 2191,
+    "price": "$$",
+    "lat": 25.056995699999998,
+    "lng": 121.5289402,
+    "googleMapsUri": "https://maps.google.com/?cid=17515336633636355456&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJt_-mmfOpQjQRxCF22lb5vsU",
+    "name": "小巷子清燉牛肉麵四平店",
+    "city": "台北市",
+    "address": "104472臺北市中山區中吉里四平街40號",
+    "hours": "星期一: 10:30 – 20:30",
+    "closingHour": 20.5,
+    "rating": 4.7,
+    "reviews": 1406,
+    "price": "$$",
+    "lat": 25.0535994,
+    "lng": 121.5321189,
+    "googleMapsUri": "https://maps.google.com/?cid=14249100422474506692&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJZzvvbWCpQjQR9M4RShcKW5U",
+    "name": "四平街番茄牛肉麵",
+    "city": "台北市",
+    "address": "10491臺北市中山區中央里四平街93號",
+    "hours": "星期一: 11:00 – 14:00, 17:00 – 20:00",
+    "closingHour": 20,
+    "rating": 4.1,
+    "reviews": 2460,
+    "price": "$$",
+    "lat": 25.053740299999998,
+    "lng": 121.5352037,
+    "googleMapsUri": "https://maps.google.com/?cid=10762206829675138804&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJux-SCFqpQjQR9xDFoWfvI-w",
+    "name": "老外一品牛肉麵",
+    "city": "台北市",
+    "address": "10491臺北市中山區新喜里吉林路403號",
+    "hours": "星期一: 11:30 – 14:00, 17:30 – 20:00",
+    "closingHour": 20,
+    "rating": 4.2,
+    "reviews": 1188,
+    "price": "$$",
+    "lat": 25.065956699999997,
+    "lng": 121.53052129999999,
+    "googleMapsUri": "https://maps.google.com/?cid=17015707045510582519&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJSzyDUAipQjQRPLcYN7ta84k",
+    "name": "牛店精燉牛肉麵",
+    "city": "台北市",
+    "address": "108臺北市萬華區西門里昆明街91號",
+    "hours": "星期一: 休息",
+    "closingHour": 0,
+    "rating": 4.3,
+    "reviews": 4011,
+    "price": "$$",
+    "lat": 25.0425424,
+    "lng": 121.50485049999997,
+    "googleMapsUri": "https://maps.google.com/?cid=9940388562666567484&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJEaMTjPSpQjQRg74JDKlRIAs",
+    "name": "御真牛牛肉麵 Taiwanese Beef Noodle Soup 대만 우육면",
+    "city": "台北市",
+    "address": "108臺北市萬華區西門里成都路27巷3號",
+    "hours": "星期一: 12:00 – 21:30",
+    "closingHour": 21.5,
+    "rating": 4.8,
+    "reviews": 1036,
+    "price": "$$",
+    "lat": 25.042834,
+    "lng": 121.50689599999998,
+    "googleMapsUri": "https://maps.google.com/?cid=801730520165236355&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJeRWBlMOpQjQRWe7SwtwyyF0",
+    "name": "正杰牛肉麵",
+    "city": "台北市",
+    "address": "108臺北市萬華區忠德里東園街60號",
+    "hours": "星期一: 11:00 – 03:00",
+    "closingHour": 3,
+    "rating": 4.3,
+    "reviews": 1002,
+    "price": "$$",
+    "lat": 25.026044799999998,
+    "lng": 121.49631730000002,
+    "googleMapsUri": "https://maps.google.com/?cid=6757707164612226649&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJp3J9f5ypQjQR9_Iae8u7iBo",
+    "name": "老張牛肉麵店",
+    "city": "台北市",
+    "address": "100臺北市中正區新營里杭州南路二段48號",
+    "hours": "星期一: 11:00 – 20:30",
+    "closingHour": 20.5,
+    "rating": 3.8,
+    "reviews": 1520,
+    "price": "$$",
+    "lat": 25.0308426,
+    "lng": 121.52214679999999,
+    "googleMapsUri": "https://maps.google.com/?cid=1911984524436894455&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJvSbgmQypQjQRPX7acLGaOj4",
+    "name": "城中老牌牛肉拉麵大王",
+    "city": "台北市",
+    "address": "100臺北市中正區光復里重慶南路一段46巷7號",
+    "hours": "星期一: 10:00 – 19:30",
+    "closingHour": 19.5,
+    "rating": 4.1,
+    "reviews": 5353,
+    "price": "$$",
+    "lat": 25.044524,
+    "lng": 121.51261849999999,
+    "googleMapsUri": "https://maps.google.com/?cid=4484066465894006333&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJ_c-S6ZCpQjQR8BqlbR-GH6o",
+    "name": "郭記牛肉麵",
+    "city": "台北市",
+    "address": "100臺北市中正區螢圃里汀州路二段152號",
+    "hours": "星期一: 11:30 – 14:00, 17:00 – 20:00",
+    "closingHour": 20,
+    "rating": 4.2,
+    "reviews": 1680,
+    "price": "$$",
+    "lat": 25.024172999999998,
+    "lng": 121.5213816,
+    "googleMapsUri": "https://maps.google.com/?cid=12258664180267424496&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJq0T3oHypQjQRyaW2caD6c4Y",
+    "name": "銀記手擀刀切牛肉麵",
+    "city": "台北市",
+    "address": "100臺北市中正區梅花里八德路一段82巷9弄17號",
+    "hours": "星期一: 11:00 – 15:00, 17:00 – 21:00",
+    "closingHour": 21,
+    "rating": 4.1,
+    "reviews": 3542,
+    "price": "$$",
+    "lat": 25.0436002,
+    "lng": 121.5313792,
+    "googleMapsUri": "https://maps.google.com/?cid=9688362790413575625&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
+  },
+  {
+    "id": "ChIJ9xvVpHypQjQRw7IklYPK8oo",
+    "name": "鼎吾記（原玖伍）牛肉麵 (台北中正區必吃牛肉麵推薦／光華商場三創美食薦 / 台北人好吃滷味水餃)",
+    "city": "台北市",
+    "address": "100臺北市中正區梅花里八德路一段82巷8號1樓",
+    "hours": "星期一: 11:00 – 22:30",
+    "closingHour": 22.5,
+    "rating": 4,
+    "reviews": 3090,
+    "price": "$$",
+    "lat": 25.0437619,
+    "lng": 121.5319688,
+    "googleMapsUri": "https://maps.google.com/?cid=10012287588089770691&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgBIAA"
   },
   {
     "id": "ChIJtQGQ0mqtQjQROjOATseXkdE",
@@ -461,7 +711,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0644885,
     "lng": 121.6270421,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=15101017907821294394&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -476,7 +725,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.031290499999997,
     "lng": 121.433904,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=730951626140272469&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -491,7 +739,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0062891,
     "lng": 121.5113958,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=9265378572506647367&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -506,7 +753,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0582587,
     "lng": 121.5001131,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=16517742211617650987&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -521,7 +767,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0063021,
     "lng": 121.5169087,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=11075697575900766026&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -536,7 +781,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0179625,
     "lng": 121.4636406,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=677172019342704160&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -551,7 +795,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0002361,
     "lng": 121.51678199999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=14529191079384987732&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -566,7 +809,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9915596,
     "lng": 121.5255837,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=3586414458383651459&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -581,7 +823,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0728767,
     "lng": 121.48944290000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=5485665908713136722&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -596,7 +837,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0195972,
     "lng": 121.42705389999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=5520403450355033957&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -611,7 +851,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.049550699999998,
     "lng": 121.45867659999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=8390736892638265614&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -626,7 +865,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0045991,
     "lng": 121.458203,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=127509904695493447&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -641,7 +879,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.043707899999998,
     "lng": 121.453179,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=2675503030001702937&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -656,7 +893,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9848507,
     "lng": 121.4444767,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=11719611518623492890&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -671,7 +907,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.024011200000004,
     "lng": 121.47154490000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=7296731030442420804&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -686,7 +921,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0652099,
     "lng": 121.49116230000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=13849940935775267556&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -701,7 +935,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0712782,
     "lng": 121.49356119999997,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=17417882159205943555&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -716,7 +949,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.000303,
     "lng": 121.48381549999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=7986494930385962251&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -731,7 +963,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.978491599999998,
     "lng": 121.5510855,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=48025062704391532&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -746,7 +977,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.017794,
     "lng": 121.457455,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=7341045129025473383&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -761,7 +991,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9799908,
     "lng": 121.5380723,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=13172886322095878974&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -776,7 +1005,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.032540899999997,
     "lng": 121.47710889999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=5295272778305754416&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -791,7 +1019,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.007244,
     "lng": 121.5118233,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=14075233745186430342&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -806,7 +1033,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.016121599999998,
     "lng": 121.4790468,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=6175156451120112621&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -821,7 +1047,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9984124,
     "lng": 121.5093478,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=2477438244594039447&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -836,7 +1061,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0040983,
     "lng": 121.51644060000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=14166517099668774234&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -851,7 +1075,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.977185199999997,
     "lng": 121.54847529999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=9451242222235077634&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -866,7 +1089,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0121285,
     "lng": 121.51462639999998,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=12244439390748027420&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -881,7 +1103,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0011717,
     "lng": 121.49958749999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=12164796619534094288&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -896,7 +1117,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.061281899999997,
     "lng": 121.4832511,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=4198979429332149864&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -911,7 +1131,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.018579499999998,
     "lng": 121.295003,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=5039658606872772534&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -926,7 +1145,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.988802099999997,
     "lng": 121.28681780000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=4980565680013114824&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -941,7 +1159,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.011191699999998,
     "lng": 121.29434549999998,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=6431499889792790400&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -956,7 +1173,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9634108,
     "lng": 121.303973,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=14699741903319771569&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -971,7 +1187,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9894428,
     "lng": 121.28893059999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=9912962144923144277&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -986,7 +1201,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.959559199999998,
     "lng": 121.2951358,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=5750637181748010973&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1001,7 +1215,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.011521899999998,
     "lng": 121.31895250000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=16701102918219061167&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1016,7 +1229,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.021238600000004,
     "lng": 121.3036685,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=7520315957460429264&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1031,7 +1243,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.036076599999998,
     "lng": 121.30079219999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=4806131286828560669&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1046,7 +1257,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9546072,
     "lng": 121.241304,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=247391480434933736&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1061,7 +1271,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9551001,
     "lng": 121.23877619999998,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=6544416847928953161&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1076,7 +1285,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.986493000000003,
     "lng": 121.26773050000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=16938151706704227325&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1091,7 +1299,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0149343,
     "lng": 121.2988817,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=6817215277849067320&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1106,7 +1313,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.050692599999998,
     "lng": 121.2566996,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=18359425375104983805&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1121,7 +1327,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.983854899999997,
     "lng": 121.31245229999998,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=6639619269959528281&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1136,7 +1341,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.992358499999998,
     "lng": 121.3156753,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=4420394762968359514&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1151,7 +1355,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9964586,
     "lng": 121.3162359,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=10484841239069185036&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1166,7 +1369,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9559489,
     "lng": 121.2254476,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=11141800274089983841&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1181,7 +1383,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9903876,
     "lng": 121.3152359,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=1088148736406020453&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1196,7 +1397,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.992327,
     "lng": 121.33600140000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=8706003287014385478&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1211,7 +1411,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0182878,
     "lng": 121.2675045,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=16695667679439212937&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1226,7 +1425,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0288123,
     "lng": 121.30498779999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=4930130606577167380&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1241,7 +1439,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.020150599999997,
     "lng": 121.30303980000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=9182890981339037271&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1256,7 +1453,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 25.0190628,
     "lng": 121.30022129999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=14180159585370206921&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1271,7 +1467,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.9600977,
     "lng": 121.29911580000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=4233943789487321888&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1286,7 +1481,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.956467,
     "lng": 121.21712900000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=14757668944916924690&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1301,7 +1495,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.989158800000002,
     "lng": 121.31132,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=14473804425992090613&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1316,7 +1509,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.993510399999998,
     "lng": 121.30823230000001,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=8149909815238227918&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1331,7 +1523,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.956533999999998,
     "lng": 121.217139,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=7302143736271385383&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   },
   {
@@ -1346,8 +1537,6 @@ export const restaurantSeedData = [
     "price": "$$",
     "lat": 24.957576200000002,
     "lng": 121.30102889999999,
-    "isOpen": false,
     "googleMapsUri": "https://maps.google.com/?cid=15598906774256267458&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA"
   }
 ];
-
