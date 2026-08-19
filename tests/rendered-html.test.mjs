@@ -23,6 +23,8 @@ test("server-renders the 110-store map and verified article introductions", asyn
   const html = await response.text();
   const readableHtml = html.replaceAll("<!-- -->", "");
   assert.match(html, /深夜牛肉麵地圖/);
+  assert.doesNotMatch(html, /網站合作廣告/);
+  assert.doesNotMatch(html, /廣告預覽/);
   assert.match(html, />110<!-- --> 間/);
   assert.match(html, /半島牛肉麵/);
   assert.match(html, /食尚玩家/);

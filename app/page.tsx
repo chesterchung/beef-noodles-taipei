@@ -282,6 +282,18 @@ export default function Home() {
         <div className="topbar-note"><span className="live-dot" /> 即時營業資訊</div>
       </header>
 
+      {/*
+        廣告預留空間：有合作廣告時移除本段註解即可恢復。
+        <aside className="header-ad-slot" aria-label="廣告預覽">
+          <div className="header-ad-preview">
+            <span className="ad-label">ADVERTISEMENT · 廣告預覽</span>
+            <span className="ad-kicker">今晚，也值得一碗好麵</span>
+            <strong>網站合作廣告</strong>
+            <span className="ad-detail">此處預留品牌橫幅版位</span>
+          </div>
+        </aside>
+      */}
+
       <section className="hero-copy"><div><p className="section-kicker">A WARM BOWL, ANY HOUR</p><h2>今晚，從哪一碗開始？</h2><p className="hero-description">整理台北、新北、桃園的牛肉麵店，<br />把還亮著燈的那幾家先留給你。</p></div><div className="hero-stats" aria-label="店家統計"><div><strong>{restaurants.length}</strong><span>收錄店家</span></div><div><strong>{lateCount}</strong><span>凌晨 00:00 後</span></div></div></section>
 
       <section className="workspace" aria-label="牛肉麵地圖與店家列表">
